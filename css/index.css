@@ -1,0 +1,426 @@
+input{
+    margin: 4px;
+    padding: 7px;
+    border-radius: 3px;
+    font-size: 14px;
+    width: 90%;
+}
+
+button{
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+select{
+    width: 250px;
+    height: 25px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+#background{
+    background: linear-gradient(34deg, #a29025, #247151);
+    height: 100%;
+    overflow: auto;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.content{
+    position: relative;
+}
+
+.formContent{
+    padding: 10px;
+}
+
+/* ************************** Форма авторизации ******************************* */
+#logIn_form{
+    display: none;
+    margin: 50px auto;
+    width: 500px;
+    background-color: #b6dea3;
+    text-align: center;
+    border-radius: 10px;
+}
+
+#login_lab{
+    text-align: left;
+    width: 90%;
+}
+
+#login_name{
+    height: 20px;
+    -moz-transition: border-color 0.4s ease;
+    -o-transition: border-color 0.4s ease;
+    -webkit-transition: border-color 0.4s ease;
+}
+
+#login_name:focus{
+    border-color: #7dda15;
+}
+
+#enter{
+    width: 130px;
+    margin-right: 20px;
+    padding: 7px;
+    font-size: 14px;
+    background-color: #55b75e;
+    -moz-transition: box-shadow 0.4s ease;
+    -o-transition: box-shadow 0.4s ease;
+    -webkit-transition: box-shadow 0.4s ease;
+}
+
+#enter:hover{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+#sign-in{
+    width: 200px;
+    margin-left: 20px;
+    padding: 7px;
+    font-size: 14px;
+    background-color: #b0b740;
+    -moz-transition: box-shadow 0.4s ease;
+    -o-transition: box-shadow 0.4s ease;
+    -webkit-transition: box-shadow 0.4s ease;
+}
+
+#sign-in:hover{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+/* **************************************************************************** */
+
+/* ************************** Форма регистрации ******************************* */
+#reg_form{
+    display: none;
+    margin: 50px auto;
+    width: 500px;
+    background-color: #b6dea3;
+    text-align: center;
+    border-radius: 10px;
+}
+
+#reg_lab{
+    text-align: left;
+    width: 90%;
+}
+
+#reg_name{
+    height: 20px;
+    -moz-transition: border-color 0.4s ease;
+    -o-transition: border-color 0.4s ease;
+    -webkit-transition: border-color 0.4s ease;
+}
+
+#reg_name:focus{
+    border-color: #7dda15;
+}
+
+#create_ac{
+    width: 200px;
+    margin-right: 20px;
+    padding: 7px;
+    font-size: 14px;
+    background-color: #55b75e;
+    -moz-transition: box-shadow 0.4s ease;
+    -o-transition: box-shadow 0.4s ease;
+    -webkit-transition: box-shadow 0.4s ease;
+}
+
+#create_ac:hover{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+#cancel-reg{
+    width: 130px;
+    margin-left: 20px;
+    padding: 7px;
+    font-size: 14px;
+    cursor: pointer;
+    background-color: #E05F36;
+    -moz-transition: box-shadow 0.4s ease;
+    -o-transition: box-shadow 0.4s ease;
+    -webkit-transition: box-shadow 0.4s ease;
+}
+
+#cancel-reg:hover{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+/* **************************************************************************** */
+
+/* ***************************** Список заявок ******************************** */
+#applicationsList{
+    display: none;
+    margin: 40px auto;
+    width: 820px;
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+
+.list-title{
+    padding: 5px 15px 0 15px;
+}
+
+.user-name, .button-group{
+    display: inline-block;
+    width: 100%;
+    margin-right: -100%;
+}
+
+.user-name{
+    font-size: 30px;
+    font-weight: 900;
+}
+
+.button-group{
+    text-align: right;
+    display: inline-block;
+}
+
+#add-app{
+    padding: 5px;
+    font-size: 15px;
+    width: 160px;
+    background-color: #98e0a6;
+    z-index: 200;
+    -moz-transition: box-shadow 0.4s ease;
+    -o-transition: box-shadow 0.4s ease;
+    -webkit-transition: box-shadow 0.4s ease;
+}
+
+#add-app:hover{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+#exit{
+    padding: 5px;
+    font-size: 15px;
+    width: 100px;
+    background-color: #e0a18f;
+    -moz-transition: box-shadow 0.4s ease;
+    -o-transition: box-shadow 0.4s ease;
+    -webkit-transition: box-shadow 0.4s ease;
+}
+
+#exit:hover{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.list-content{
+    padding: 10px;
+    font-size: 18px;
+}
+
+#empty-list{
+    margin: 4px;
+    display: none;
+}
+
+.apps{
+    display: none;
+}
+
+.app{
+    margin: 10px 6px;
+    padding: 10px;
+    background-color: #55b74c;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.app:hover{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+    background-color: #13b76a;
+}
+
+.app-info{
+    display: none;
+    margin: 4px;
+    padding: 10px;
+    background-color: #aed166;
+    border-radius: 3px;
+}
+
+.edit_status{
+    padding: 4px;
+    margin: 5px 0;
+    background-color: blanchedalmond;
+}
+/* **************************************************************************** */
+
+/* ************************Форма добавления заявок***************************** */
+#modal_add_app {
+    width: 500px;
+    height: 450px; /* Рaзмеры дoлжны быть фиксирoвaны */
+    border-radius: 5px;
+    border: 3px #000 solid;
+    background: #fefff9;
+    position: fixed; /* чтoбы oкнo былo в видимoй зoне в любoм месте */
+    top: 45%; /* oтступaем сверху 45%, oстaльные 5% пoдвинет скрипт */
+    left: 50%; /* пoлoвинa экрaнa слевa */
+    margin-top: -280px;
+    margin-left: -250px; /* тут вся мaгия центрoвки css, oтступaем влевo и вверх минус пoлoвину ширины и высoты сooтветственнo =) */
+    display: none; /* в oбычнoм сoстoянии oкнa не дoлжнo быть */
+    opacity: 0; /* пoлнoстью прoзрaчнo для aнимирoвaния */
+    z-index: 2000; /* oкнo дoлжнo быть нaибoлее бoльшем слoе */
+    padding: 20px 10px;
+}
+.modal-content{
+    text-align: center;
+    font-size: 17px;
+}
+.modal-content .comment{
+    width: 100%;
+    max-width: 100%;
+    height: 40px;
+    max-height: 50px;
+}
+#estimated, #deadline{
+    margin: 0;
+    padding: 3px;
+    height: 18px;
+}
+#create_app{
+    padding: 5px;
+    width: 100px;
+    background-color: #ddc645;
+}
+/* Кнoпкa зaкрыть */
+#modal_add_app #modal_close {
+    width: 21px;
+    height: 21px;
+    font-size: 25px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    display: block;
+}
+/* Пoдлoжкa */
+#overlay {
+    z-index:10; /* пoдлoжкa дoлжнa быть выше слoев элементoв сaйтa, нo ниже слoя мoдaльнoгo oкнa */
+    position:fixed; /* всегдa перекрывaет весь сaйт */
+    background-color:#000; /* чернaя */
+    opacity:0.8; /* нo немнoгo прoзрaчнa */
+    -moz-opacity:0.8; /* фикс прозрачности для старых браузеров */
+    filter:alpha(opacity=80);
+    width:100%;
+    height:100%; /* рaзмерoм вo весь экрaн */
+    top:0;
+    left:0;
+    cursor:pointer;
+    display:none; /* в oбычнoм сoстoянии её нет) */
+}
+/* **************************************************************************** */
+
+/* ***************************** Панель Админа ******************************** */
+.admin-panel{
+    background: #fefff9;
+    width: 240px;
+    height: 300px;
+    position: fixed;
+    right: 10px;
+    top: 40px;
+    border-radius: 7px;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 18px;
+}
+
+#add-contr{
+    padding: 5px;
+    font-size: 15px;
+    width: 200px;
+    background-color: #98e0a6;
+    -moz-transition: box-shadow 0.4s ease;
+    -o-transition: box-shadow 0.4s ease;
+    -webkit-transition: box-shadow 0.4s ease;
+}
+
+#add-contr:hover{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.form-for-add-contr{
+    margin-top: 5px;
+    border-radius: 4px;
+    display: none;
+}
+
+#contr-name{
+    margin: 3px;
+    padding: 4px;
+}
+
+#create_contr{
+    background-color: #ddc645;
+    padding: 3px 5px;
+    width: 100px;
+    margin: 4px;
+}
+
+#make-contr{
+    padding: 5px;
+    font-size: 15px;
+    width: 200px;
+    background-color: #98e0a6;
+    z-index: 190;
+    -moz-transition: box-shadow 0.4s ease;
+    -o-transition: box-shadow 0.4s ease;
+    -webkit-transition: box-shadow 0.4s ease;
+}
+
+#make-contr:hover{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.form-for-make-contr{
+    display: none;
+    margin-top: 5px;
+    border-radius: 4px;
+}
+
+#apps-list, #contr-list{
+    width: 90%;
+    margin: 5px;
+    font-size: 14px;
+}
+
+#appoint_contr{
+    background-color: #ddc645;
+    padding: 3px 5px;
+    width: 100px;
+    margin: 4px;
+}
+/* **************************************************************************** */
+
+.edit_panel{
+    background-color: #fefff9;
+    position: fixed;
+    left: 10px;
+    top: 40px;
+    width: 240px;
+    height: 120px;
+    border-radius: 7px;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 18px;
+    display: none;
+    z-index: 1000;
+}
+
+#status_value{
+    margin: 3px;
+    padding: 4px;
+}
+
+#change_status{
+    padding: 4px;
+    margin: 5px auto;
+    width: 100px;
+    background-color: #ddc645;
+}
