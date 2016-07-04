@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Система учёта заявок</title>
+    <!--<link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">-->
+
+    <!--<script src="js/libs/jquery.min.js"></script>-->
+    <!--<script src="js/func_list.js"></script>-->
+    <!--<script src="js/index.js"></script>-->
+    <script src="js/build.js"></script>
+</head>
+<body>
+
+    <div id="background"></div>
+
+    <div class="content">
+
+        <div id="logIn_form">
+            <form>
+                <div class="formContent">
+                    <h2>Авторизация</h2>
+                    <label class="fa fa-user" id="login_lab" aria-hidden="true">&nbsp;Логин</label><br>
+                    <input name="name" type="text" id="login_name" placeholder="Логин"><br><br>
+                    <button id="enter" type="button">
+                        <span class="fa fa-sign-in fa-lg" aria-hidden="true"></span>&nbsp; Войти
+                    </button>
+                    <button id="sign-in" type="button">
+                        <span class="fa fa-user-plus fa-lg" aria-hidden="true"></span>&nbsp; Зарегистрироваться
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <div id="reg_form">
+            <form>
+                <div class="formContent">
+                    <h2>Регистрация</h2>
+                    <label id="reg_lab" class="fa fa-user" aria-hidden="true">&nbsp;Логин</label><br>
+                    <input type="text" id="reg_name" placeholder="Логин"><br><br>
+                    <button id="create_ac" type="button">
+                        <span class="fa fa-user-plus fa-lg" aria-hidden="true"></span>&nbsp; Создать профиль
+                    </button>
+
+                    <button id="cancel-reg" type="button">
+                        <span class="fa fa-close fa-lg" aria-hidden="true"></span>&nbsp; Отмена
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Панель Админа -->
+        <div class="admin-panel">
+            <div><strong>Панель администратора</strong></div><hr>
+            <button type="button" id="add-contr">
+                <span class="fa fa-user-plus"></span>&nbsp;Добавить исполнителя
+            </button><br>
+
+            <div class="form-for-add-contr">
+                <input type="text" id="contr-name">
+                <button type="button" id="create_contr">Добавить</button>
+            </div><br>
+
+            <button type="button" id="make-contr">
+                <span class="fa fa-university"></span>&nbsp;Назначить исполнителя
+            </button>
+
+            <div class="form-for-make-contr">
+                <select id="contr-list"></select>
+                <select id="apps-list"></select>
+                <button type="button" id="appoint_contr">Назначить</button>
+            </div><br><br>
+
+            <button type="button" id="filter-list">
+                <span class="fa fa-filter"></span>&nbsp;Фильтр
+            </button>
+
+            <div class="form-for-filter">
+                <select id="clients-list"></select>
+                <button type="button" id="filter">Показать</button>
+                <button type="button" id="cancel-filter" disabled>Отменить</button>
+            </div><br><br>
+
+            <button type="button" id="search-apps">
+                <span class="fa fa-search"></span>&nbsp;Поиск
+            </button>
+
+            <div class="form-for-search">
+                <input type="text" id="search-text">
+                <button type="button" id="search">Найти</button>
+                <button type="button" id="cancel-search" disabled>Отменить</button>
+            </div>
+        </div>
+
+        <!-- Панель для редактирования -->
+        <div class="edit_panel">
+            <div><strong>Статус заявки</strong></div><hr>
+            <input type="text" id="status_value">
+            <button type="button" id="change_status">Изменить</button>
+        </div>
+
+        <!-- Список заявок -->
+        <div id="applicationsList">
+            <div class="list-title">
+                <div class="user-name">Serg</div>
+                <div class="button-group">
+                    <button type="button" id="add-app">
+                        <span class="fa fa-plus"></span>&nbsp;Добавить заявку
+                    </button>
+                    <button type="button" id="exit">
+                        <span class="fa fa-power-off"></span>&nbsp; Выйти
+                    </button>
+                </div>
+            </div><hr>
+
+            <div id="modal_add_app"><!-- Окнo создания заявки -->
+                <span id="modal_close">&times;</span> <!-- Кнoпкa зaкрыть -->
+                <div class="modal-content">
+                    <h3>Добавить заявку</h3><hr>
+                    <div>Исполнитель: </div>
+                    <select id="contractors"></select><br><br>
+                    <div>Описание: </div>
+                    <textarea class="comment"></textarea>
+                    <div>Приоритет: </div>
+                    <select id="priority">
+                        <option>Низкий</option>
+                        <option>Средний</option>
+                        <option>Высокий</option>
+                    </select><br><br>
+                    <div>Ожидаемое время выполнения (в днях): </div>
+                    <input type="text" id="estimated"><br><br>
+                    <div>Крайний срок (в днях): </div>
+                    <input type="text" id="deadline"><br><br>
+                    <button type="button" id="create_app">
+                        <span class="fa fa-plus"></span>&nbsp;Добавить
+                    </button>
+                </div>
+            </div>
+
+            <div class="list-content">
+                <span id="empty-list">Список заявок пуст ...</span>
+                <div class="apps"></div>
+                <!--<script type="text/template" id="template">
+                    <% for(var i = 0; i < items.length; i++) { %>
+                        <div class='app'>
+                            <div class='app-title'>Заявка<%-(i+1)%></div>
+                            <div class='app-info'>
+                                Клиент: <%-items[i].client%><br/>
+                                Исполнитель: <%-items[i].contractor%><br/>
+                                Информация: <%-items[i].info%><br/>
+                                Приоритет: <%-items[i].priority%><br/>
+                                Ожидаемое время исполнения: <%-items[i].estimated%><br/>
+                                Крайние сроки: <%-items[i].deadline%><br/>
+                                Готовность: <%-items[i].ready%><br/>
+                                <button class='edit_status'>Редактировать статус заявки</button>
+                            </div>
+                        </div>
+                    <% } %>
+                </script>-->
+            </div>
+        </div>
+        <div id="overlay"></div><!-- Пoдлoжкa для модального окна -->
+
+    </div>
+
+</body>
+</html>
