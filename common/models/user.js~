@@ -1,0 +1,5 @@
+module.exports = function(User) {
+User.create({login: 'chik-chik'}, function(err, userInstance) {
+    console.log(userInstance);
+  });
+};
