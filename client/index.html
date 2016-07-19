@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Система учёта заявок</title>
+    <!--<link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">-->
+
+    <!--<script src="js/libs/jquery.min.js"></script>-->
+    <!--<script src="js/func_list.js"></script>-->
+    <!--<script src="js/index.js"></script>-->
+
+</head>
+<body>
+
+    <div id="background"></div>
+
+    <div class="content">
+
+        <div id="logIn_form">
+           <!-- <form>
+                <div class="formContent">
+                    <h2>Авторизация</h2>
+                    <label class="fa fa-user" id="login_lab" aria-hidden="true">&nbsp;Логин</label><br>
+                    <input name="name" type="text" id="login_name" placeholder="Логин"><br><br>
+                    <button id="enter" type="button">
+                        <span class="fa fa-sign-in fa-lg" aria-hidden="true"></span>&nbsp; Войти
+                    </button>
+                    <button id="sign-in" type="button">
+                        <span class="fa fa-user-plus fa-lg" aria-hidden="true"></span>&nbsp; Зарегистрироваться
+                    </button>
+                </div>
+            </form>
+            -->
+        </div>
+
+        <div id="reg_form"></div>
+
+        <!-- Панель Админа -->
+        <div class="admin-panel">
+            <div><strong>Панель администратора</strong></div><hr>
+
+            <button type="button" id="add-contr">
+                <span class="fa fa-user-plus"></span>&nbsp;Добавить исполнителя
+            </button><br>
+
+            <div class="form-for-add-contr"> </div><br>
+
+            <button type="button" id="make-contr">
+                <span class="fa fa-university"></span>&nbsp;Назначить исполнителя
+            </button>
+
+            <div class="form-for-make-contr">
+            </div><br><br>
+
+            <button type="button" id="filter-list">
+                <span class="fa fa-filter"></span>&nbsp;Фильтр
+            </button>
+
+            <div class="form-for-filter">
+            </div><br><br>
+
+            <button type="button" id="search-apps">
+                <span class="fa fa-search"></span>&nbsp;Поиск
+            </button>
+
+            <div class="form-for-search">
+                <input type="text" id="search-text">
+                <button type="button" id="search">Найти</button>
+                <button type="button" id="cancel-search" disabled>Отменить</button>
+            </div>
+        </div>
+
+        <!-- Панель для редактирования -->
+        <div class="edit_panel">
+            <div><strong>Статус заявки</strong></div><hr>
+            <input type="text" id="status_value">
+            <button type="button" id="change_status">Изменить</button>
+        </div>
+
+        <!-- Список заявок -->
+        <div id="applicationsList">
+            <div class="list-title">
+                <div class="user-name"></div>
+                <div class="button-group">
+                    <button type="button" id="add-app">
+                        <span class="fa fa-plus"></span>&nbsp;Добавить заявку
+                    </button>
+                    <button type="button" id="exit">
+                        <span class="fa fa-power-off"></span>&nbsp; Выйти
+                    </button>
+                </div>
+            </div><hr>
+
+            <div id="modal_add_app"></div>
+
+            <div class="list-content">
+                <span id="empty-list">Список заявок пуст ...</span>
+                <div class="apps"></div>
+            </div>
+        </div>
+
+        <div id="overlay"></div>
+
+    </div>
+    <script src="js/build.js"></script>
+</body>
+</html>

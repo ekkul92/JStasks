@@ -1,0 +1,26 @@
+{
+  "name": "user",
+  "plural": "users",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "login": {
+      "type": "string",
+      "id": true,
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "apps": {
+      "type": "hasMany",
+      "model": "app",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
