@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Canvas</title>
+    <link rel="stylesheet" href="index.css">
+
+</head>
+<body>
+
+    <div id="content">
+
+        <div id="top">
+            <button type="button" class="save">Save information about workers</button>
+            <input type="file" id="input">
+            <button type="button" id="showContent">Show the file's content</button> <br/>
+            <textarea id="result"></textarea>
+            <hr>
+        </div>
+
+
+        <div class="figure">
+            <button id="square" type="button">square</button><br/>
+            <div class="figure1">
+                <button id="square1" type="button">to draw a square</button>
+                <button id="square_inc" type="button">to increase a square</button>
+                <button id="square_dec" type="button">to decrease a square</button>
+                <button id="square_getArea" type="button">to get area a square</button>
+            </div>
+
+            <button id="rectangle" type="button">rectangle</button>
+
+            <div class="figure2">
+                <button id="rectangle1" type="button">to draw a rectangle</button>
+                <button id="rectangle_inc" type="button">to increase a rectangle</button>
+                <button id="rectangle_dec" type="button">to decrease a rectangle</button>
+                <button id="rectangle_getArea" type="button">to get area a rectangle</button>
+            </div>
+
+            <button id="circle" type="button">circle</button>
+            <div class="figure3">
+                <button id="circle1" type="button">to draw a circle</button>
+                <button id="circle_inc" type="button">to increase a circle</button>
+                <button id="circle_dec" type="button">to decrease a circle</button>
+                <button id="circle_getArea" type="button">to get area a circle</button>
+            </div>
+        </div>
+
+        <div id="canvas1">
+            <canvas id="canvas" width="300" height="300"> </canvas>
+            <div id="area"> </div>
+        </div>
+    </div>
+
+    <script src="./js/build.js"></script>
+
+</body>
+</html>
