@@ -1,0 +1,15 @@
+<% items.forEach(function(item, i) { %>
+    <div class='app'>
+        <div class='app-title'>Заявка<%=(i+1)%></div>
+        <div class='app-info'>
+            Клиент: <%=item.client%><br/>
+            Исполнитель: <%=item.contractor%><br/>
+            Информация: <%=item.info%><br/>
+            Приоритет: <%=item.priority%><br/>
+            Ожидаемое время исполнения: <%=item.estimated%><br/>
+            Крайние сроки: <%=item.deadline%><br/>
+            Готовность: <%=item.ready%><br/>
+            <button class='edit_status'>Редактировать статус заявки</button>
+        </div>
+    </div>
+<% }); %>
