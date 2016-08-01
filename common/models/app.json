@@ -1,0 +1,54 @@
+{
+  "name": "app",
+  "plural": "apps",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "contractor": {
+      "type": "string"
+    },
+    "priority": {
+      "type": "string",
+      "required": true
+    },
+    "deadline": {
+      "type": "string",
+      "required": true
+    },
+    "ready": {
+      "type": "string",
+      "required": true
+    },
+    "estimated": {
+      "type": "string",
+      "required": true
+    },
+    "info": {
+      "type": "string",
+      "required": true
+    },
+    "client": {
+      "type": "string",
+      "id": false,
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "user": {
+      "type": "belongsTo",
+      "model": "user",
+      "foreignKey": ""
+    },
+    "contractors": {
+      "type": "belongsTo",
+      "model": "contractors",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
