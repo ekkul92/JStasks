@@ -1,0 +1,22 @@
+{
+  "name": "activeUser",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "login": {
+      "type": "string",
+      "id": true,
+      "required": true
+    },
+    "isContractor": {
+      "type": "boolean"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
