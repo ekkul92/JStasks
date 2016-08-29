@@ -1,0 +1,7 @@
+<% items.forEach(function(item) { %>
+  <div class="comment">
+    <span class="delete" title="удалить">&#10008</span>
+    <div class="comment_date"><%-item.date%></div>
+    <h4><%-item.text%></h4>
+  </div>
+<% }); %>
