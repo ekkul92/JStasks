@@ -1,0 +1,27 @@
+{
+  "name": "comment",
+  "base": "PersistedModel",
+  "strict": false,
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "text": {
+      "type": "string"
+    },
+    "date": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "theme": {
+      "type": "belongsTo",
+      "model": "theme",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

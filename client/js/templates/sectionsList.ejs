@@ -1,0 +1,29 @@
+<% items.forEach(function(item) { %>
+
+  <table class="chapter" border="2">
+    <caption>
+      <span class="title"><%-item.section%></span>
+      <button class="add_theme" type="button">Добавить тему</button>
+    </caption>
+    <colgroup>
+      <col class="col1">
+      <col class="col2">
+    </colgroup>
+    <thead>
+    <tr>
+      <th scope="col1">Темы</th>
+      <th scope="col2">Ответы</th>
+    </tr>
+    </thead>
+    <tbody>
+    <% item.themes.forEach(function(ob) { %>
+
+        <tr>
+          <td><%-ob.theme%></td>
+          <td><%-ob.count%><span class="delete_theme">&#10008</span></td>
+        </tr>
+
+    <% }); %>
+    </tbody>
+  </table>
+<% }); %>

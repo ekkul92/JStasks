@@ -1,0 +1,29 @@
+{
+  "name": "section",
+  "plural": "sections",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "id": true,
+      "required": true
+    },
+    "date": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "themes": {
+      "type": "hasMany",
+      "model": "theme",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
